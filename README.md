@@ -20,6 +20,8 @@ Web Application: Creating an intuitive interface for users to interact with the 
 
 **[Diptangshu Bej](https://github.com/DiptangshuBej)**<br>
 
+**[Anand Raut](https://github.com/Anand-Raut9)**<br>
+
 ## Contributing
 
 1. **Fork the repository**
