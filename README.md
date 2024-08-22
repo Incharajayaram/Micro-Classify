@@ -22,6 +22,8 @@ Web Application: Creating an intuitive interface for users to interact with the 
 
 **[Anand Raut](https://github.com/Anand-Raut9)**<br>
 
+**[Likith Manjunatha](https://github.com/Likith-m-22)**<br>
+
 ## Contributing
 
 1. **Fork the repository**
