@@ -11,6 +11,12 @@ Signal Processing: Obtained dataset from IEEE Dataport.<br>
 Machine Learning: Implementing Python-based models to classify objects based on the extracted features.<br>
 Web Application: Creating an intuitive interface for users to interact with the classification system.<br>
 
+## Contributors 
+
+[Inchara J](https://github.com/Incharajayaram)
+[Shravya H Jain](https://github.com/shravya312)
+[Diptangshu Bej](https://github.com/DiptangshuBej)
+
 ## Contributing
 
 1. **Fork the repository**
