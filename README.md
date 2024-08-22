@@ -13,9 +13,11 @@ Web Application: Creating an intuitive interface for users to interact with the 
 
 ## Contributors 
 
-[Inchara J](https://github.com/Incharajayaram)
-[Shravya H Jain](https://github.com/shravya312)
-[Diptangshu Bej](https://github.com/DiptangshuBej)
+**[Inchara J](https://github.com/Incharajayaram)**<br>
+
+**[Shravya H Jain](https://github.com/shravya312)**<br>
+
+**[Diptangshu Bej](https://github.com/DiptangshuBej)**<br>
 
 ## Contributing
 
