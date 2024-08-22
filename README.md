@@ -1,4 +1,24 @@
-# Micro-Doppler-Based-Target-Classification-
+
+# Micro-Doppler-Based-Target-Classification
+
+## Project Overview
+
+The Micro-Doppler Based Target Classification project focuses on distinguishing between drones and non-drones (such as birds) by analyzing micro-Doppler signatures captured from radar sensors. <br>
+This technology is essential for improving situational awareness in scenarios such as surveillance, search and rescue missions, and safeguarding critical infrastructure. <br>
+
+The project encompasses:
+
+Signal Processing: Obtained dataset from IEEE Dataport.<br>
+Machine Learning: Implementing Python-based models to classify objects based on the extracted features.<br>
+Web Application: Creating an intuitive interface for users to interact with the classification system.<br>
+
+## Contributors 
+
+**[Inchara J](https://github.com/Incharajayaram)**<br>
+
+**[Shravya H Jain](https://github.com/shravya312)**<br>
+
+**[Diptangshu Bej](https://github.com/DiptangshuBej)**<br>
 
 ## Contributing
 
