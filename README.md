@@ -3,14 +3,14 @@
 
 ## Project Overview
 
-The Micro-Doppler Based Target Classification project focuses on distinguishing between drones and non-drones (such as birds) by analyzing micro-Doppler signatures captured from radar sensors. <br>
+The **Micro-Doppler Based Target Classification** project focuses on distinguishing between drones and non-drones (such as birds) by analyzing micro-Doppler signatures captured from radar sensors. <br>
 This technology is essential for improving situational awareness in scenarios such as surveillance, search and rescue missions, and safeguarding critical infrastructure. <br>
 
 The project encompasses:
 
-Signal Processing: Obtained dataset from IEEE Dataport.<br>
-Machine Learning: Implementing Python-based models to classify objects based on the extracted features.<br>
-Web Application: Creating an intuitive interface for users to interact with the classification system.<br>
+**Signal Processing**: Obtained dataset from IEEE Dataport.<br>
+**Machine Learning**: Implementing Python-based models to classify objects based on the extracted features.<br>
+**Web Application**: Creating an intuitive interface for users to interact with the classification system.<br>
 
 ## Contributors 
 
@@ -19,6 +19,10 @@ Web Application: Creating an intuitive interface for users to interact with the 
 **[Shravya H Jain](https://github.com/shravya312)**<br>
 
 **[Diptangshu Bej](https://github.com/DiptangshuBej)**<br>
+
+**[Anand Raut](https://github.com/Anand-Raut9)**<br>
+
+**[Likith Manjunatha](https://github.com/Likith-m-22)**<br>
 
 ## Contributing
 
@@ -30,16 +34,21 @@ Web Application: Creating an intuitive interface for users to interact with the 
    ```
 
 3. **Make your changes**
-4. **Commit your changes**:
+4. **Add your changes**:
 
    ```sh
-   git commit -am 'Add new feature'
+   git add <filename>
+   ```
+5. **Commit your changes**:
+
+   ```sh
+   git commit -m 'Add new feature'
    ```
 
-5. **Push to the branch**:
+6. **Push to the branch**:
 
    ```sh
    git push origin feature
    ```
 
-6. **Create a new Pull Request**
+7. **Create a new Pull Request**
