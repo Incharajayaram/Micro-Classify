@@ -8,9 +8,9 @@ This technology is essential for improving situational awareness in scenarios su
 
 The project encompasses:
 
-Signal Processing: Obtained dataset from IEEE Dataport.<br>
-Machine Learning: Implementing Python-based models to classify objects based on the extracted features.<br>
-Web Application: Creating an intuitive interface for users to interact with the classification system.<br>
+**Signal Processing**: Obtained dataset from IEEE Dataport.<br>
+**Machine Learning**: Implementing Python-based models to classify objects based on the extracted features.<br>
+**Web Application**: Creating an intuitive interface for users to interact with the classification system.<br>
 
 ## Contributors 
 
