@@ -34,16 +34,21 @@ The project encompasses:
    ```
 
 3. **Make your changes**
-4. **Commit your changes**:
+4. **Add your changes**:
 
    ```sh
-   git commit -am 'Add new feature'
+   git add <filename>
+   ```
+5. **Commit your changes**:
+
+   ```sh
+   git commit -m 'Add new feature'
    ```
 
-5. **Push to the branch**:
+6. **Push to the branch**:
 
    ```sh
    git push origin feature
    ```
 
-6. **Create a new Pull Request**
+7. **Create a new Pull Request**
