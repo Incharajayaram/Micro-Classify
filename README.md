@@ -103,7 +103,7 @@ Micro-Doppler-Based-Target-Classification-/
    ```
 
 3. **Make your changes**
-4. **Add your changes**:
+4. **Add your changes**:-
 
    ```sh
    git add <filename>
