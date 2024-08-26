@@ -26,7 +26,7 @@ The project encompasses:
 
 ## Tech Stack
 
-**Frontend**: Frontend: React, HTML, Bootstrap, JavaScript.<br>
+**Frontend**: React, HTML, Bootstrap, JavaScript.<br>
 
 **Backend**: Flask/Express.js.<br>
 
