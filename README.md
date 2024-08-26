@@ -38,6 +38,61 @@ The project encompasses:
 
 **Version Control & CI/CD**: Git/GitHub, GitHub Actions.<br>
 
+## Project Structure
+
+```sh
+Micro-Doppler-Based-Target-Classification-/
+├── Frontend/                      # React frontend directory
+│   ├── public/                    # Public assets like HTML, icons, etc.
+│   ├── src/
+│   │   ├── assets/                # Static assets (images, fonts, etc.)
+│   │   ├── components/            # Reusable React components
+│   │   ├── pages/                 # Page components (Home, Dashboard, etc.)
+│   │   ├── services/              # API calls to Flask backend
+│   │   ├── App.js                 # Main React component
+│   │   ├── index.js               # React entry point
+│   │   └── styles/                # CSS/Sass files
+│   ├── .env                       # Environment variables
+│   ├── package.json               # NPM dependencies
+│   └── README.md                  # Frontend documentation
+├── Backend/                       # Flask backend directory
+│   ├── app/
+│   │   ├── __init__.py            # Flask app initialization
+│   │   ├── controllers/           # Route controllers
+│   │   │   ├── classification.py  # Classification API endpoint
+│   │   │   ├── healthcheck.py     # Healthcheck API endpoint
+│   │   ├── models/                # Data models (if needed)
+│   │   ├── services/              # Business logic (model inference, etc.)
+│   │   │   ├── model_inference.py # Logic for loading models and making predictions
+│   │   ├── utils/                 # Utility functions (e.g., logging, error handling)
+│   │   ├── static/                # Static files (model weights, logs)
+│   │   ├── templates/             # HTML templates (if needed for serving static pages)
+│   │   └── config.py              # Configuration file (for environment variables, etc.)
+│   ├── tests/                     # Unit tests for backend
+│   │   ├── test_classification.py # Tests for the classification endpoint
+│   │   └── conftest.py            # Test configurations and fixtures
+│   ├── requirements.txt           # Python dependencies
+│   ├── wsgi.py                    # WSGI entry point for production (optional)
+│   ├── .flaskenv                  # Flask-specific environment variables
+│   ├── .env                       # General environment variables
+│   └── README.md                  # Backend documentation
+├── ml_model/                      # Machine learning model directory
+│   ├── notebooks/                 # Jupyter notebooks for experiments and model training
+│   ├── src/
+│   │   ├── data/                  # Data handling scripts
+│   │   ├── model/                 # Model training, evaluation, and prediction scripts
+│   │   ├── utils/                 # Utility scripts (data preprocessing, visualization)
+│   ├── requirements.txt           # Python dependencies for ML
+│   ├── venv/                      # Virtual environment for ML
+│   ├── .gitignore                 # Ignore unnecessary files (e.g., model weights, virtual env)
+│   └── README.md                  # ML model documentation
+├── docker-compose.yaml            # Docker Compose file (if containerizing)
+├── Dockerfile                     # Dockerfile for backend (if containerizing)
+├── .gitignore                     # Global .gitignore file
+├── LICENSE                        # License file
+└── README.md                      # Main project documentation
+```
+
 ## Contributing
 
 1. **Fork the repository**
