@@ -24,6 +24,20 @@ The project encompasses:
 
 **[Likith Manjunatha](https://github.com/Likith-m-22)**<br>
 
+## Tech Stack
+
+**Frontend**: Frontend: React, HTML, Bootstrap, JavaScript.<br>
+
+**Backend**: Flask/Express.js.<br>
+
+**Machine Learning**: Python, PyTorch, Scikit-learn, numpy.<br>
+
+**Visualization**: Matplotlib.<br>
+
+**Deployment**: Docker, Gunicorn.<br>
+
+**Version Control & CI/CD**: Git/GitHub, GitHub Actions.<br>
+
 ## Contributing
 
 1. **Fork the repository**
