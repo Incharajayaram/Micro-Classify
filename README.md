@@ -82,6 +82,7 @@ Micro-Doppler-Based-Target-Classification-/
 │   │   ├── data/                  # Data handling scripts
 │   │   ├── model/                 # Model training, evaluation, and prediction scripts
 │   │   ├── utils/                 # Utility scripts (data preprocessing, visualization)
+│   │   ├── main.py                # Main script python file to run the pretrained moddel
 │   ├── requirements.txt           # Python dependencies for ML
 │   ├── venv/                      # Virtual environment for ML
 │   ├── .gitignore                 # Ignore unnecessary files (e.g., model weights, virtual env)
