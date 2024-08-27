@@ -24,6 +24,8 @@ The project encompasses:
 
 **[Likith Manjunatha](https://github.com/Likith-m-22)**<br>
 
+**[Chethan A C](https://github.com/chethanac15)**<br>
+
 ## Tech Stack
 
 **Frontend**: React, HTML, Bootstrap, JavaScript.<br>
