@@ -7,7 +7,8 @@ from model.model_customcnn import CustomCNN
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Paths
-base_dir = r'D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-\ml_model\notebooks\DIAT-uSAT_dataset'
+import os
+base_dir = os.getenv('DIAT_DATASET_PATH', r'D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-\ml_model\notebooks\DIAT-uSAT_dataset')
 subfolders = [
     r"3_long_blade_rotor", 
     r"3_short_blade_rotor", 

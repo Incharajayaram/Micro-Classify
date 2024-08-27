@@ -16,7 +16,7 @@ train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 
 # Initialize model
 model = initialize_vgg19(num_classes=6).to(device)
-model_name = f"best_model_{model.__class__.__name__}.pt"
+model_name = f"best_model_CustomVGG.pt"
 
 # Check if pre-trained model exists
 if os.path.exists(model_name):
