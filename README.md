@@ -57,6 +57,8 @@ The project encompasses:
 
 **Deployment**: Docker, Gunicorn.<br>
 
+**API Testing**: Postman API.<br>
+
 **Version Control & CI/CD**: Git/GitHub, GitHub Actions.<br>
 
 ## Project Structure
