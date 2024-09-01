@@ -12,6 +12,7 @@ The project encompasses:
 **Machine Learning**: Implementing Python-based models to classify objects based on the extracted features.<br>
 **Web Application**: Creating an intuitive interface for users to interact with the classification system.<br>
 
+
 | Classes | Three-Long-Blade-Rotor | Three-Short-Blade-Rotor | Bird | Bird + Mini-Helicopter | Drone | RC Plane |
 |:--------|:------------------------|:-----------------------|:-----|:-----------------------|:------|:---------:|
 | Pictures | ![image](https://github.com/user-attachments/assets/7006926f-85d9-47da-8289-b3236dc158d8)| ![image](https://github.com/user-attachments/assets/fe8962c3-1660-4732-ad0e-daee44cd3e27) | ![image](https://github.com/user-attachments/assets/d396b45a-1c45-4f8c-a73e-dd0d850661f3) | ![image](https://github.com/user-attachments/assets/ab27f402-83ed-4196-aa03-f3a1727212f8) | ![image](https://github.com/user-attachments/assets/a5f9c9da-198c-42b6-a9ba-04ad240e1448) | ![image](https://github.com/user-attachments/assets/2634c1c5-a1a4-41ed-b8b2-b9b2c9111e5f) | 
