@@ -49,13 +49,13 @@ The project encompasses:
 
 **Frontend**: React, HTML, Bootstrap, JavaScript.<br>
 
-**Backend**: Flask/Express.js.<br>
+**Backend**: Flask.<br>
 
 **Machine Learning**: Python, PyTorch, Scikit-learn, numpy.<br>
 
 **Visualization**: Matplotlib.<br>
 
-**Deployment**: Docker, Gunicorn.<br>
+**Deployment**: Docker, Waitress.<br>
 
 **API Testing**: Postman API.<br>
 
