@@ -30,10 +30,10 @@ class CustomVGG(nn.Module):
         return x
 
 def initialize_vgg19(num_classes):
-    vgg16_base = models.vgg16(pretrained=True)
-    for param in vgg16_base.parameters():
+    vgg19_base = models.vgg19(pretrained=True)
+    for param in vgg19_base.parameters():
         param.requires_grad = False
-    return CustomVGG(vgg16_base, num_classes)
+    return CustomVGG(vgg19_base, num_classes)
 
 
 # load the ml model
@@ -41,17 +41,25 @@ num_classes = 6
 model = initialize_vgg19(num_classes)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
-model.load_state_dict(torch.load(r'best_model_CustomVGG.pt'))
-model.eval()
+try:
+    model.load_state_dict(torch.load(r"D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-\Backend\best_model_CustomVGG.pt", weights_only=True))
+except RuntimeError as e:
+    print("Error loading model state dict:", e)
 
-def predict(image_tensor):
-    image_tensor = image_tensor.to(device)  # Move input data to GPU
+def predict(image_tensor, class_names):
+    image_tensor = image_tensor.to(device)  
     with torch.no_grad():
         output = model(image_tensor)
-        _, predicted = torch.max(output, 1)
-    return predicted.item()
+        probabilities = F.softmax(output, dim=1)
+        confidence, predicted = torch.max(probabilities, 1)
+    return class_names[predicted.item()], confidence.item()
+
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return " "
 
 # define a transform to preprocess the input image 
 transform = transforms.Compose([
@@ -60,23 +68,19 @@ transform = transforms.Compose([
     transforms.RandomRotation(20),
     transforms.ColorJitter(brightness=0.2, contrast=0.2),
     transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
 @app.route('/predict', methods=['POST'])
 def predict_route():
-    # get the file from the POST request
     file = request.files['image']
-
-    # convert the file to an image 
     image = Image.open(file.stream).convert('RGB')
-
-    # preprocess the image 
     image = transform(image).unsqueeze(0)
+    class_names = ['3 long blade rotor', '3 short blade rotor', 'Bird', 'Bird + mini-helicopter', 'Drone', 'RC Plane']
+    prediction, confidence = predict(image, class_names)
 
-    prediction = predict(image)
+    return jsonify({'prediction': prediction, 'confidence': confidence})
 
-    # return the prediction as a json response
-    return jsonify({'prediction': prediction})
 
 if __name__ == '__main__':
     app.run(debug=True)
