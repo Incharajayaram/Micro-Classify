@@ -12,6 +12,24 @@ The project encompasses:
 **Machine Learning**: Implementing Python-based models to classify objects based on the extracted features.<br>
 **Web Application**: Creating an intuitive interface for users to interact with the classification system.<br>
 
+| Classes | Three-Long-Blade-Rotor | Three-Short-Blade-Rotor | Bird | Bird + Mini-Helicopter | Drone | RC Plane |
+|:--------|:------------------------|:-----------------------|:-----|:-----------------------|:------|:---------:|
+| Pictures | ![image](https://github.com/user-attachments/assets/7006926f-85d9-47da-8289-b3236dc158d8)| ![image](https://github.com/user-attachments/assets/fe8962c3-1660-4732-ad0e-daee44cd3e27) | ![image](https://github.com/user-attachments/assets/d396b45a-1c45-4f8c-a73e-dd0d850661f3) | ![image](https://github.com/user-attachments/assets/ab27f402-83ed-4196-aa03-f3a1727212f8) | ![image](https://github.com/user-attachments/assets/a5f9c9da-198c-42b6-a9ba-04ad240e1448) | ![image](https://github.com/user-attachments/assets/2634c1c5-a1a4-41ed-b8b2-b9b2c9111e5f) | 
+| Spectrogram Images | ![image](https://github.com/user-attachments/assets/4eacd2ae-aff1-46c1-84aa-7c35b9354edd) | ![image](https://github.com/user-attachments/assets/34cf66ed-5f45-47d7-8517-eee29e4b1c48) | ![image](https://github.com/user-attachments/assets/7d45fd48-19a1-4bec-83ad-53cb37fb72d9) | ![image](https://github.com/user-attachments/assets/7c335c47-f2a2-41fe-b9b7-02faae0e542b) | ![image](https://github.com/user-attachments/assets/51c2aa8f-cac6-4436-8c13-da3fed6cd21a) | ![image](https://github.com/user-attachments/assets/3da26ff9-8eb9-4fa4-a9e5-fb9c5329b55c) | 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 ## Contributors 
 
 **[Inchara J](https://github.com/Incharajayaram)**<br>
