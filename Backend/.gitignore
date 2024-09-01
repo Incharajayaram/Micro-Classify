@@ -1,3 +1,6 @@
 *.keras
 *.h5
 *.pt
+*.bat
+*.sh
+*.log

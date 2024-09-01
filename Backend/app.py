@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import torch 
 from PIL import Image
 from torchvision import transforms
@@ -9,6 +10,9 @@ import torchvision.models as models
 sys.path.append(r'D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-')
 from ml_model.src.model.model_vgg import initialize_vgg19
 from ml_model.src.model.model_vgg import CustomVGG
+import logging
+from logging.handlers import RotatingFileHandler
+
 
 class CustomVGG(nn.Module):
     def __init__(self, base_model, num_classes):
@@ -42,7 +46,9 @@ model = initialize_vgg19(num_classes)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 try:
-    model.load_state_dict(torch.load(r"D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-\Backend\best_model_CustomVGG.pt", weights_only=True))
+    model.load_state_dict(torch.load(r"D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-\Backend\best_model_CustomVGG.pt", 
+                                     weights_only=True, 
+                                     map_location=device))
 except RuntimeError as e:
     print("Error loading model state dict:", e)
 
@@ -56,6 +62,14 @@ def predict(image_tensor, class_names):
 
 
 app = Flask(__name__)
+CORS(app)
+
+if not app.debug:  # Only configure logging if not in debug mode
+    handler = RotatingFileHandler('error.log', maxBytes=100000, backupCount=3)
+    handler.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]')
+    handler.setFormatter(formatter)
+    app.logger.addHandler(handler)
 
 @app.route('/')
 def index():
@@ -78,8 +92,12 @@ def predict_route():
     image = transform(image).unsqueeze(0)
     class_names = ['3 long blade rotor', '3 short blade rotor', 'Bird', 'Bird + mini-helicopter', 'Drone', 'RC Plane']
     prediction, confidence = predict(image, class_names)
-
+    app.logger.info('Prediction: %s, Confidence: %.4f', prediction, confidence)
     return jsonify({'prediction': prediction, 'confidence': confidence})
+
+@app.route('/health', methods=['GET'])
+def health_check():
+    return "OK", 200
 
 
 if __name__ == '__main__':
