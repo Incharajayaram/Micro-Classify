@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>Contact Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: 'Poppins', sans-serif;
+                background: linear-gradient(#114c94,#5ba5dd);
+                font-weight: bolder;
+                font-size: larger;
+
+            
+                
+            }
+
+            nav{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 80px;
+                background-color: #112d4e;
+            }
+
+            nav ul{
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul li {
+                list-style: none;
+                margin: 0 23px;
+                
+            }
+
+            nav ul li a{
+                text-decoration: none;
+                
+                color: #92b6e2;
+            }
+
+            nav ul li a:hover{
+                
+                
+                color: whitesmoke;
+                font-size: 1.01rem;
+            }
+            .left{
+                font-size: 2rem;
+                font-weight: bolder;
+                color: #b8cbda;
+            }
+            .right{
+                color:#72869e;
+
+            }
+
+            .contact-container{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .contact-left{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+            }
+            .contact-left-title h2{
+                font-weight: 600;
+                color: rgb(84, 2, 138);
+                font-size: 40px;
+                margin-bottom: 5px;
+            }
+            .contact-left-title hr{
+                border: none;
+                width: 120px;
+                height: 5px;
+                background-color: rgb(224, 135, 165);
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            .contact-inputs{
+                width: 400px;
+                height: 50px;
+                border: none;
+                outline: none;
+                padding-left: 25px;
+                font-weight: 500;
+                color: black;
+                border-radius: 50px;
+            }
+            .contact-left textarea{
+                height: 140px;
+                padding-top: 15px;
+                border-radius: 20px;
+
+            }
+            .contact-inputs:focus{
+                color: 2px solid #112d4e;
+            }
+            .contact-inputs::placeholder{
+                color: #112d4e;
+            }
+            .contact-left button{
+                display: flex;
+                align-items: center;
+                padding: 15px 30px;
+                font-size: 16px;
+                color: antiquewhite;
+                gap: 10px;
+                border-radius: 50px;
+                background: linear-gradient(270deg,#9b0fb8,#c17cc7);
+                cursor: pointer;
+            }
+            .contact-left button img{
+                height: 15px;
+            }
+            .contact-right {
+                width: 500px;
+            }
+
+            @media (max-width:800px) {
+                .contact-inputs{
+                    width: 80vw;
+
+                }
+                .contact-right{
+                    display: none;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="left">MicroClassify</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li> 
+                    </ul>
+                </div>
+            </nav>
+    
+        </header>
+        <main>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <div class="contact-left-title">
+                        <h2>Get in touch</h2>
+                        <hr>
+                    </div>
+                    <input type="hidden" name="access_key" value="{{ access_key }}">
+                    <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                    <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                    <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                    <button type="submit">Submit <img src="{{ url_for('static', filename='assets/arrow_icon.png')}}" alt="arrow"></button>
+                </form>
+                <div class="contact-right">
+                    <img src="{{ url_for('static', filename='assets/right_img.png') }}" alt="right">
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+    

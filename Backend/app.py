@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import torch 
 from PIL import Image
@@ -12,6 +12,8 @@ from ml_model.src.model.model_vgg import initialize_vgg19
 from ml_model.src.model.model_vgg import CustomVGG
 import logging
 from logging.handlers import RotatingFileHandler
+from dotenv import load_dotenv
+import os
 
 
 class CustomVGG(nn.Module):
@@ -61,8 +63,10 @@ def predict(image_tensor, class_names):
     return class_names[predicted.item()], confidence.item()
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 CORS(app)
+
+
 
 if not app.debug:  # Only configure logging if not in debug mode
     handler = RotatingFileHandler('error.log', maxBytes=100000, backupCount=3)
@@ -71,9 +75,6 @@ if not app.debug:  # Only configure logging if not in debug mode
     handler.setFormatter(formatter)
     app.logger.addHandler(handler)
 
-@app.route('/')
-def index():
-    return " "
 
 # define a transform to preprocess the input image 
 transform = transforms.Compose([
@@ -84,6 +85,14 @@ transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
+
+@app.route('/')
+def home():
+    return render_template("index.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
 @app.route('/predict', methods=['POST'])
 def predict_route():
@@ -99,6 +108,11 @@ def predict_route():
 def health_check():
     return "OK", 200
 
+load_dotenv()
+@app.route('/contact')
+def contact():
+    access_key = os.getenv('WEB3FORMS_ACCESS_KEY')
+    return render_template('contact.html', access_key=access_key)
 
 if __name__ == '__main__':
     app.run(debug=True)
