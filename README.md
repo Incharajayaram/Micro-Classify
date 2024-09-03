@@ -47,7 +47,7 @@ The project encompasses:
 
 ## Tech Stack
 
-**Frontend**: React, HTML, Bootstrap, JavaScript.<br>
+**Frontend**: HTML, CSS, JavaScript.<br>
 
 **Backend**: Flask.<br>
 
@@ -65,38 +65,14 @@ The project encompasses:
 
 ```sh
 Micro-Doppler-Based-Target-Classification-/
-├── Frontend/                      # React frontend directory
-│   ├── public/                    # Public assets like HTML, icons, etc.
-│   ├── src/
-│   │   ├── assets/                # Static assets (images, fonts, etc.)
-│   │   ├── components/            # Reusable React components
-│   │   ├── pages/                 # Page components (Home, Dashboard, etc.)
-│   │   ├── services/              # API calls to Flask backend
-│   │   ├── App.js                 # Main React component
-│   │   ├── index.js               # React entry point
-│   │   └── styles/                # CSS/Sass files
-│   ├── .env                       # Environment variables
-│   ├── package.json               # NPM dependencies
-│   └── README.md                  # Frontend documentation
 ├── Backend/                       # Flask backend directory
-│   ├── app/
-│   │   ├── __init__.py            # Flask app initialization
-│   │   ├── controllers/           # Route controllers
-│   │   │   ├── classification.py  # Classification API endpoint
-│   │   │   ├── healthcheck.py     # Healthcheck API endpoint
-│   │   ├── models/                # Data models (if needed)
-│   │   ├── services/              # Business logic (model inference, etc.)
-│   │   │   ├── model_inference.py # Logic for loading models and making predictions
-│   │   ├── utils/                 # Utility functions (e.g., logging, error handling)
-│   │   ├── static/                # Static files (model weights, logs)
-│   │   ├── templates/             # HTML templates (if needed for serving static pages)
-│   │   └── config.py              # Configuration file (for environment variables, etc.)
-│   ├── tests/                     # Unit tests for backend
-│   │   ├── test_classification.py # Tests for the classification endpoint
-│   │   └── conftest.py            # Test configurations and fixtures
-│   ├── requirements.txt           # Python dependencies
-│   ├── wsgi.py                    # WSGI entry point for production (optional)
-│   ├── .flaskenv                  # Flask-specific environment variables
+│   ├── static/                    # Static files like css, js, images, etc
+│   ├── templates/                 # Frontend html files as templates for Flask
+│   ├── app.py                     # Main Flask App
+│   ├── venv                       # virtual env Folders
+│   ├── .gitignore
+│   ├── monitor.py                 # file to monitor errors and logs
+│   ├── requirements.txt           # flask requirements
 │   ├── .env                       # General environment variables
 │   └── README.md                  # Backend documentation
 ├── ml_model/                      # Machine learning model directory
