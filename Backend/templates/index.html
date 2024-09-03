@@ -133,20 +133,35 @@
             font-size: larger;
             display: flex;
             justify-content: center;
-            margin: 2px;
-            padding-top: 1%;
+            margin: 5px;
+            padding-top: 30px;
             align-items: center;
             color: #dbe2ef;
             font-weight: bolder;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
         }
         .twoTwo {
-            font-size: large;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding-top: 2px;
-            color: whitesmoke;
-            font-weight: 500;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-radius: 8px; /* Rounded corners */
+            margin: 10px; /* Space around the container */
+        }
+        .twoTwo h2 {
+            font-size: 1.5em; /* Adjust font size as needed */
+            color:  #dbe2ef; /* Light text color for contrast */
+            font-weight: 500; /* Make the text bolder */
+            text-align: center; /* Center the text */
+            margin: 0%;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+        .twoTwo .line {
+            display: inline-flex;
+            margin-bottom: 1px; /* Space between lines */
         }
         img {
             max-width: 100%;
@@ -157,10 +172,11 @@
             display: flex;
             justify-content: center;
             padding-top: 3%;
+            padding: 40px;
             align-items: center;
-            width: 100%;
             overflow: hidden;
         }
+
         .goLink {
             display: flex;
             justify-content: center;
@@ -184,12 +200,12 @@
     </header>
     <main>
         <section class="firstSection">
-            <div class="oneOne"><h1>Micro Classify:</h1></div>
+            <div class="oneOne"><h1><b>MicroClassify</b></h1></div>
             <div class="twoTwo">
-                <h2>
-                    <p>Efficient Classification of Low</p>
-                    <p>RCS Aerial Targets Using</p>
-                    <p>CNN on Micro Doppler Images</p>
+                <h2>        
+                    <span class="line">Efficient Classification of Low</span><br>
+                    <span class="line">RCS Aerial Targets Using</span><br>
+                    <span class="line">CNN on Micro Doppler Images</span>
                 </h2>
             </div>
             <div class="threeThree">
