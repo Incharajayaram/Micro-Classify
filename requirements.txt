@@ -28,3 +28,4 @@ flask-cors
 waitress
 Pillow 
 Flask
+python-dotenv
