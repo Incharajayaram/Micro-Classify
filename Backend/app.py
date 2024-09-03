@@ -8,8 +8,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.models as models
 sys.path.append(r'D:\micro-doppler based target classification\Micro-Doppler-Based-Target-Classification-')
-from ml_model.src.model.model_vgg import initialize_vgg19
-from ml_model.src.model.model_vgg import CustomVGG
 import logging
 from logging.handlers import RotatingFileHandler
 from dotenv import load_dotenv
