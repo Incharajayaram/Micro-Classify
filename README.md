@@ -55,11 +55,11 @@ The project encompasses:
 
 **Visualization**: Matplotlib.<br>
 
-**Deployment**: Docker, Waitress.<br>
+**Deployment**: Docker, gunicorn, nginx, Route 53, certbot.<br>
 
 **API Testing**: Postman API.<br>
 
-**Version Control & CI/CD**: Git/GitHub, GitHub Actions.<br>
+**Version Control & CI/CD**: Git/GitHub.<br>
 
 ## Project Structure
 
