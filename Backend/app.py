@@ -113,4 +113,4 @@ def contact():
     return render_template('contact.html', access_key=access_key)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
