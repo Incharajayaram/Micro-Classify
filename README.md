@@ -1,10 +1,6 @@
 
 # Micro-Classify
 
-
-
-
-
 <br>[Web App Repository](https://github.com/Incharajayaram/micro-doppler-web-app)</br>
 <br>[Prototype Repository](https://github.com/Incharajayaram/streamlit-app-microclassify)</br>
 
