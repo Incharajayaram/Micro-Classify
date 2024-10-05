@@ -50,7 +50,7 @@ ID: 39446<br>
 ## Project Structure
 
 ```sh
-Micro-Doppler-Based-Target-Classification-/
+Micro-Classify/
 ├── ml_model/                      # Machine learning model directory
 │   ├── notebooks/                 # Jupyter notebooks for experiments and model training
 │   ├── src/
