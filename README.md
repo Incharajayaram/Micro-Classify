@@ -69,6 +69,34 @@ Micro-Classify/
 └── README.md                      # Main project documentation
 ```
 
+## Model Metrics 
+```sh
+Test Loss: 0.0244, Accuracy: 0.9918
+Classification Report:
+                      precision    recall  f1-score   support
+
+  3_long_blade_rotor       0.99      0.99      0.99        72
+ 3_short_blade_rotor       0.99      0.96      0.98        85
+                Bird       1.00      1.00      1.00        76
+Bird+mini-helicopter       1.00      1.00      1.00        78
+               drone       1.00      1.00      1.00        85
+            rc_plane       0.98      1.00      0.99        90
+
+            accuracy                           0.99       486
+           macro avg       0.99      0.99      0.99       486
+        weighted avg       0.99      0.99      0.99       486
+```
+## Graphs 
+**Loss Curve**<br>
+![image](https://github.com/user-attachments/assets/c472c727-1e3a-4679-9f45-cd56a2f74178)
+<br>**Accuracy Curve**<br>
+![image](https://github.com/user-attachments/assets/8e974691-d29f-4391-9fb7-9cce5fdcd759)
+<br>**F1 score Curve**<br>
+![image](https://github.com/user-attachments/assets/a06316a7-d2b1-4adb-b2b6-8936e2684846)
+
+## Web App
+![image](https://github.com/user-attachments/assets/97f0194d-bf9a-4bce-91a3-cb495ae69664)
+
 ## Contributing
 
 1. **Fork the repository**
