@@ -51,16 +51,6 @@ ID: 39446<br>
 
 ```sh
 Micro-Doppler-Based-Target-Classification-/
-├── Backend/                       # Flask backend directory
-│   ├── static/                    # Static files like css, js, images, etc
-│   ├── templates/                 # Frontend html files as templates for Flask
-│   ├── app.py                     # Main Flask App
-│   ├── venv                       # virtual env Folders
-│   ├── .gitignore
-│   ├── monitor.py                 # file to monitor errors and logs
-│   ├── requirements.txt           # flask requirements
-│   ├── .env                       # General environment variables
-│   └── README.md                  # Backend documentation
 ├── ml_model/                      # Machine learning model directory
 │   ├── notebooks/                 # Jupyter notebooks for experiments and model training
 │   ├── src/
