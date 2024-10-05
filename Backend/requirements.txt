@@ -1,7 +1,0 @@
-Flask
-torch
-Pillow 
-waitress
-torchvision
-flask-cors
-python-dotenv
