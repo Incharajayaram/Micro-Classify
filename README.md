@@ -41,7 +41,7 @@ ID: 39446<br>
 
 **Visualization**: Matplotlib.<br>
 
-**Deployment**: Docker, gunicorn, nginx, Route 53, certbot.<br>
+**Deployment**: Docker, gunicorn, nginx, AWS ec2, Route 53, certbot.<br>
 
 **API Testing**: Postman API.<br>
 
