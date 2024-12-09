@@ -1,3 +1,4 @@
 *.keras
 *.h5
 *.pt
+*.onnx
