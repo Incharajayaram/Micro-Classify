@@ -7,8 +7,69 @@ ID: 39446<br>
 <br>[Prototype Repository](https://github.com/Incharajayaram/streamlit-app-microclassify)</br>
 
 
+## Introduction 
+The **Micro-Classify** project leverages **Micro-Doppler** radar signatures to identify and classify small aerial targets like **drones** and **birds**. This classification system is essential for surveillance, defence, and airspace management, providing a reliable distinction between human-made and natural objects.
 
 
+## Problem Statement 
+
+Current radar systems often struggle to differentiate between small aerial targets like drones and birds due to similarities in their radar signatures. Misclassification can lead to operational inefficiencies, such as false alarms or overlooked threats.
+
+### The primary challenges include:
+
+  1.	Variability in micro-Doppler signatures across radar bands.
+  2. Imbalanced and limited datasets.
+  3.	Achieving real-time, high-accuracy predictions.
+
+
+## Solution Overview 
+
+The proposed solution leverages a CNN-LSTM architecture with attention mechanisms to extract spatial and temporal features from micro-Doppler radar signals. Data augmentation via ACGANs (Auxiliary Classifier GANs) enhances dataset size and balance, improving classification performance.
+
+
+## Dataset
+
+  1. **Source**: Radio Micro-Doppler signatures
+  2. **Size** [Datasetsize] with [number] samples
+  3. **Classes**: Drones, birds and other Ariel targets
+  4. **Preprocessing**:
+        a. Spectogram generation
+        b. Noise reduction and normalization
+  5. **Challenges**:
+        a.	Class imbalance resolved using ACGANs.
+        b.	Multi-band radar data (L, S, C, X bands) managed through branch-specific tuning.
+
+
+## Deployment
+
+  •	**Platform**: Hosted on AWS EC2.
+  •	**Containerization**: Docker ensures scalability and reproducibility.
+  •	**API Access**: Interactive API built using Flask.
+
+
+## Evaluation Metrics
+
+  •	**Accuracy**: Measures overall classification correctness.
+  •	**F1-Score**: Balances precision and recall for imbalanced datasets.
+  •	**Confusion Matrix**: Visualizes classification performance across classes.
+  •	**Latency**: Evaluates real-time prediction feasibility.
+
+
+## Results 
+
+-**Accuracy: 99.18%**
+-**F1-Score: 0.99**
+-**Latency**: [Insert Time]
+-**Visualizations**:
+-**ROC curve**
+-**Confusion Matrix**
+
+
+##References
+
+Research papers on micro-Doppler radar classification.
+TensorFlow and Keras official documentation.
+Flask and Docker documentation.
 
 
 
@@ -57,7 +118,7 @@ Micro-Classify/
 │   │   ├── data/                  # Data handling scripts
 │   │   ├── model/                 # Model training, evaluation, and prediction scripts
 │   │   ├── utils/                 # Utility scripts (data preprocessing, visualization)
-│   │   ├── main.py                # Main script python file to run the pretrained moddel
+│   │   ├── main.py                # Main script python file to run the pre-trained model
 │   ├── requirements.txt           # Python dependencies for ML
 │   ├── venv/                      # Virtual environment for ML
 │   ├── .gitignore                 # Ignore unnecessary files (e.g., model weights, virtual env)
