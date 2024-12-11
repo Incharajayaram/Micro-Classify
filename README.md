@@ -33,43 +33,43 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
   2. **Size** [Datasetsize] with [number] samples
   3. **Classes**: Drones, birds and other Ariel targets
   4. **Preprocessing**:
-        a. Spectogram generation
-        b. Noise reduction and normalization
+        - Spectrogram generation
+        - Noise reduction and normalization
   5. **Challenges**:
-        a.	Class imbalance resolved using ACGANs.
-        b.	Multi-band radar data (L, S, C, X bands) managed through branch-specific tuning.
+        - Class imbalance resolved using ACGANs.
+        - Multi-band radar data (L, S, C, X bands) managed through branch-specific tuning.
 
 
 ## Deployment
 
-  •	**Platform**: Hosted on AWS EC2.
-  •	**Containerization**: Docker ensures scalability and reproducibility.
-  •	**API Access**: Interactive API built using Flask.
+  - **Platform**: Hosted on AWS EC2.
+  - **Containerization**: Docker ensures scalability and reproducibility.
+  - **API Access**: Interactive API built using Flask.
 
 
 ## Evaluation Metrics
 
-  •	**Accuracy**: Measures overall classification correctness.
-  •	**F1-Score**: Balances precision and recall for imbalanced datasets.
-  •	**Confusion Matrix**: Visualizes classification performance across classes.
-  •	**Latency**: Evaluates real-time prediction feasibility.
+  - **Accuracy**: Measures overall classification correctness.
+  - **F1-Score**: Balances precision and recall for imbalanced datasets.
+  - **Confusion Matrix**: Visualizes classification performance across classes.
+  - **Latency**: Evaluates real-time prediction feasibility.
 
 
 ## Results 
 
--**Accuracy: 99.18%**
--**F1-Score: 0.99**
--**Latency**: [Insert Time]
--**Visualizations**:
--**ROC curve**
--**Confusion Matrix**
+- **Accuracy: 99.18%**
+- **F1-Score: 0.99**
+- **Latency**: [Insert Time]
+- **Visualizations**:
+- **ROC curve**
+- **Confusion Matrix**
 
 
-##References
+## References
 
-Research papers on micro-Doppler radar classification.
-TensorFlow and Keras official documentation.
-Flask and Docker documentation.
+- Research papers on micro-Doppler radar classification.
+- TensorFlow and Keras official documentation.
+- Flask and Docker documentation.
 
 
 
