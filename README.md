@@ -37,7 +37,7 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
         - Noise reduction and normalization
   5. **Challenges**:
         - Class imbalance resolved using ACGANs.
-        - Multi-band radar data (L, S, C, X bands) managed through branch-specific tuning.
+        - High computational resource requirements for real time processing
 
 
 ## Deployment
@@ -45,11 +45,12 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
   - **Platform**: Hosted on AWS EC2.
   - **Containerization**: Docker ensures scalability and reproducibility.
   - **API Access**: Interactive API built using Flask.
+  - **Raspberry PI 5**: Built a data pipeline to stream spectrograms and showcase results on raspberry pi 5, by deploying the ml model on it.
 
 
 ## Evaluation Metrics
 
-  - **Accuracy**: Measures overall classification correctness.
+  - **Accuracy**: Measures overall classification correctness. 
   - **F1-Score**: Balances precision and recall for imbalanced datasets.
   - **Confusion Matrix**: Visualizes classification performance across classes.
   - **Latency**: Evaluates real-time prediction feasibility.
@@ -59,8 +60,8 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
 
 - **Accuracy: 99.18%**
 - **F1-Score: 0.99**
-- **Latency**: [Insert Time]
-- **Visualizations**:
+- **Latency: 12.8 ms**
+- **Visualizations**: 
 - **ROC curve**
 - **Confusion Matrix**
 
@@ -68,9 +69,7 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
 ## References
 
 - Research papers on micro-Doppler radar classification.
-- TensorFlow and Keras official documentation.
-- Flask and Docker documentation.
-
+- Pytorch and Scikit-Learn official documentation.
 
 
 
