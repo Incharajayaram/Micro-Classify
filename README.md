@@ -61,9 +61,12 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
 - **Accuracy: 99.18%**
 - **F1-Score: 0.99**
 - **Latency: 12.8 ms**
-- **Visualizations**: 
-- **ROC curve**
-- **Confusion Matrix**
+- **Architecture**: ![image](https://github.com/user-attachments/assets/e298b10f-64a8-4fc4-9db0-c553ad1a9f4a)
+
+- **ROC curve**: ![image](https://github.com/user-attachments/assets/46c27615-86b7-4d1c-bf58-fb93439ea886)
+
+- **Confusion Matrix**: ![image](https://github.com/user-attachments/assets/79e61f3c-e61b-4ec8-8a6b-97d7a8c5130e)
+
 
 
 ## References
@@ -155,7 +158,8 @@ Bird+mini-helicopter       1.00      1.00      1.00        78
 ![image](https://github.com/user-attachments/assets/a06316a7-d2b1-4adb-b2b6-8936e2684846)
 
 ## Web App
-![image](https://github.com/user-attachments/assets/97f0194d-bf9a-4bce-91a3-cb495ae69664)
+![image](https://github.com/user-attachments/assets/7279b6a4-0468-4c2e-9a0f-8f22806b5c76)
+
 
 ## Contributing
 
