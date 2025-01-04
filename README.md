@@ -23,17 +23,18 @@ Current radar systems often struggle to differentiate between small aerial targe
 
 ## Solution Overview 
 
-The proposed solution leverages a CNN-LSTM architecture with attention mechanisms to extract spatial and temporal features from micro-Doppler radar signals. Data augmentation via ACGANs (Auxiliary Classifier GANs) enhances dataset size and balance, improving classification performance.
+The proposed solution leverages a CNN architecture with attention mechanisms to extract spatial and temporal features from micro-Doppler radar signals. Data augmentation via ACGANs (Auxiliary Classifier GANs) enhances dataset size and balance, improving classification performance.
 
 
 ## Dataset
 
-  1. **Source**: Radio Micro-Doppler signatures
-  2. **Size** [Datasetsize] with [number] samples
-  3. **Classes**: Drones, birds and other Ariel targets
+  1. **Source**: DIAT-mSAT dataset provided by DRDO
+  2. **Size** 6 classes with 4849 samples in total
+  3. **Classes**: Drones, bird, RC Planes, Long Blade Rotor, Short Blade Rotor, Bird + Mini-Helicopter
   4. **Preprocessing**:
         - Spectrogram generation
         - Noise reduction and normalization
+        - Window Slicing, Window Warping and Jittering
   5. **Challenges**:
         - Class imbalance resolved using ACGANs.
         - High computational resource requirements for real time processing
@@ -59,18 +60,18 @@ The proposed solution leverages a CNN-LSTM architecture with attention mechanism
 
 - **Accuracy: 99.18%**
 - **F1-Score: 0.99**
-- **Latency: 12.8 ms**
-- **Architecture**: ![image](https://github.com/user-attachments/assets/e298b10f-64a8-4fc4-9db0-c553ad1a9f4a)
+- **Latency: 12.8 ms** <br>
+- **Architecture**: <br> ![image](https://github.com/user-attachments/assets/e298b10f-64a8-4fc4-9db0-c553ad1a9f4a) </br>
 
-- **ROC curve**: ![image](https://github.com/user-attachments/assets/46c27615-86b7-4d1c-bf58-fb93439ea886)
+- **ROC curve**: <br> ![image](https://github.com/user-attachments/assets/46c27615-86b7-4d1c-bf58-fb93439ea886) </br>
 
-- **Confusion Matrix**: ![image](https://github.com/user-attachments/assets/79e61f3c-e61b-4ec8-8a6b-97d7a8c5130e)
+- **Confusion Matrix**: <br> ![image](https://github.com/user-attachments/assets/79e61f3c-e61b-4ec8-8a6b-97d7a8c5130e) </br>
 
 
 
 ## References
 
-- Research papers on micro-Doppler radar classification.
+- Research papers on micro-Doppler based target classification.
 - Pytorch and Scikit-Learn official documentation.
 
 
@@ -130,6 +131,14 @@ Micro-Classify/
 ├── LICENSE                        # License file
 └── README.md                      # Main project documentation
 ```
+
+## Notebook Content
+```sh
+notebook[1].ipynb: contains vgg16, vgg19, custom cnn models architecture, training, metrics.
+customCNNWithAtt.ipynb: contains cnn + attention mechanisms, cnn + lstm, cnn + lstm with attention mechanism models architecture, training and metrics.
+vgg+attention.ipynb: contains vgg19 + attention mechanisms model architecture, training and metrics.
+notebook[5].ipynb: contains architecture diagrams, visualizations, inferences of different models and their confusion matrices.
+````
 
 ## Model Metrics 
 ```sh
