@@ -1,11 +1,4 @@
 import torch
-import torch.optim as optim
-from torch.optim import lr_scheduler
-import torch.nn as nn
-from data import dataset
-from model.model_vgg import initialize_vgg16
-from model.model_vgg import initialize_vgg19
-
 
 def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler, device, num_epochs=15):
     model.train()

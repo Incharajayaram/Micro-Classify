@@ -3,6 +3,7 @@ from torch import nn
 from torch import optim
 from model.model_vgg import initialize_vgg16, initialize_vgg19
 from model.model_customcnn import CustomCNN
+from model.model_customcnnwithatt import CustomCNNWithAttention
 # Configurations
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -27,6 +28,7 @@ num_epochs = 15
 model_vgg16_name = "vgg16"
 model_vgg19_name = "vgg19"
 model_cnn_name = "cnn"
+model_cnnatt_name = "cnnatt"
 
 # Loss and optimizer
 criterion = nn.CrossEntropyLoss()
@@ -42,3 +44,8 @@ model_deepercnn = CustomCNN(num_classes=6)
 model_deepercnn.to(device)
 optimizer_deepercnn = optim.Adam(model_deepercnn.parameters(), lr=0.0001)
 scheduler_deepercnn = optim.lr_scheduler.ReduceLROnPlateau(optimizer_deepercnn, mode='min', factor=0.5, patience=2, min_lr=1e-7, verbose=True)
+
+model_cnnatt = CustomCNNWithAttention(num_classes=6)
+model_cnn_name.to(device)
+optimizer_cnnatt = optim.Adam(model_cnnatt.parameters(), lr=0.0001)
+scheduler_cnnatt = optim.lr_scheduler.ReduceLROnPlateau(optimizer_cnnatt, mode='min', factor=0.5, patience=2, min_lr=1e-7, verbose=True)
